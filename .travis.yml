@@ -1,0 +1,16 @@
+language: node_js
+before_install:
+- nvm install stable
+- node -v
+- npm -v
+- npm install -g gulp
+- npm install gulp
+- npm install gulp-typescript
+deploy:
+  provider: npm
+  email: npm@smart-coordination.com
+  api_key:
+    secure: A/LyyOOCHLinbQEuJOCXEC3owEiX5L61BWLGxG+dQV0qlp5jXxq2qMJfM1hipqfjaaipgNiAj8drsqQLn3kChVwpTOLw+lwCEySoPojB05owIdXOWPkwdmdiGuDGEbTC5cKZbfnvOsuYAu2uMG2ZYWmXHvutYm5HZKKLob9hq2xRCnt4HRGztVO7VdFfQ3lLv9Ut//Z4vrgDrm8Qx6pnXh2+mtxgIxzMHgRV5zLXQXh3RYaHwFFqwU0egtCBdTZkRytbJl5Ck3XwrgThzdC0gwhMRprrsfq4x5QDXoN8PC865TP6IJnVlY7jxpOlyXVtpH2nuZyianCDyHxrQkLao6n2zI+c0TMl7vG8CzhrXXhNPXRh4QTjm2JxVjUUQmqXUWffVVH1+uLTKPzq0lgqh4vO536x3tofhQtsg3Sp6Al8l800Ya4U9HU7eqWJrsLJccQOCEhywyvGkuZGNI5iId7PY+zx3c8ZYI48hdiDDgH0Partk/HTUGRC3fGxGO+I+VV/Sp/PyNA0TqSVDWfffBRU1//rXMfQUhJuTUgGsa48W8lKftttsNjg5viovTdwG7SIoERM620XM9xaohz5NOtezjVaYkV66hPnr1Krh6MKVbZIiObtIriSft6s7ENLnPREGT+6A0nKEyRouQOV8BXCv2FMFt/xt/ypE2rwGDg=
+  on:
+    tags: true
+    repo: pushrocks/gulp-addjson
