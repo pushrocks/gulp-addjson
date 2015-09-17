@@ -1,0 +1,24 @@
+{
+  "name": "gulp-addjson",
+  "version": "0.0.2",
+  "description": "adds a template to the file object to be used by other plugins thereafter in the pipeline",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd ts/compile && gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pushrocks/gulp-addjson.git"
+  },
+  "keywords": [
+    "json",
+    "jade",
+    "template"
+  ],
+  "author": "Smart Coordination GmbH <office@push.rocks> (https://push.rocks)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pushrocks/gulp-addjson/issues"
+  },
+  "homepage": "https://github.com/pushrocks/gulp-addjson"
+}
