@@ -1,6 +1,6 @@
 {
   "name": "gulp-addjson",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "adds a template to the file object to be used by other plugins thereafter in the pipeline",
   "main": "index.js",
   "scripts": {
