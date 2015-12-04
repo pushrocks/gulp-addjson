@@ -4,7 +4,11 @@
   "description": "adds a template to the file object to be used by other plugins thereafter in the pipeline",
   "main": "index.js",
   "scripts": {
-    "test": "cd ts/compile && gulp"
+    "test": "cd ts/compile && node compile.js",
+    "reinstall": "(rm -r node_modules && npm install)",
+    "release": "(npm test) && (git pull origin master && npm version patch && git push origin master && git checkout release && git merge master && git push origin release && git checkout master)",
+    "update": "(git checkout master && git pull origin master && npm install)",
+    "upgrade": "(npm run update) && (ncu upgradeAll && npm install)"
   },
   "repository": {
     "type": "git",
@@ -12,7 +16,6 @@
   },
   "keywords": [
     "json",
-    "jade",
     "template"
   ],
   "author": "Smart Coordination GmbH <office@push.rocks> (https://push.rocks)",
@@ -20,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/pushrocks/gulp-addjson/issues"
   },
-  "homepage": "https://github.com/pushrocks/gulp-addjson"
+  "homepage": "https://github.com/pushrocks/gulp-addjson",
+  "dependencies": {
+    "beautylog": "1.0.6",
+    "smartfile": "0.0.8",
+    "through2": "2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-typescript": "2.10.0"
+  }
 }
